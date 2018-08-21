@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "postgres",
-    "password": "qwerty123",
-    "database": "tuf_db",
+    "password": "qwerty12345",
+    "database": "tuf-db",
     "host": "127.0.0.1",
     "port": 5432,
     "dialect": "postgres"

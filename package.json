@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "nodemon ./bin/www",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "rimraf dist/ && babel ./ --out-dir dist/ --ignore ./node_modules,./.babelrc,./package.json,./npm-debug.log --copy-files",
+    "start": "npm run build && node dist/bin/www"
   },
   "repository": {
     "type": "git",
@@ -29,6 +31,9 @@
     "sequelize": "^4.38.0"
   },
   "devDependencies": {
-    "nodemon": "^1.18.3"
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.3",
+    "rimraf": "^2.6.2"
   }
 }

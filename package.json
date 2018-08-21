@@ -1,0 +1,22 @@
+{
+  "name": "receipt-generator-server",
+  "version": "1.0.0",
+  "description": "Receipt Generator for TUF Donations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/theunitedfoundation/receipt-generator-server.git"
+  },
+  "keywords": [
+    "tuf"
+  ],
+  "author": "shoaib30",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/theunitedfoundation/receipt-generator-server/issues"
+  },
+  "homepage": "https://github.com/theunitedfoundation/receipt-generator-server#readme"
+}

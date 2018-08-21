@@ -1,8 +1,9 @@
-const receiptController = require('../controllers').receipt;
+// const receiptController = require('../controllers').receipt;
+import ReceiptCntrl from './receipt'
 
-module.exports = (app) => {
-  require('./receipt')(app)
+export default function (app) {
+  ReceiptCntrl(app)
   app.get('/api', (req, res) => res.status(200).send({
-    message: 'Welcome to the TUF Receipt API!',
-  }));
-};
+    message: 'Welcome to the TUF Receipt API!'
+  }))
+}

@@ -1,4 +1,5 @@
-'use strict';
+'use strict'
+
 export default (sequelize, DataTypes) => {
   const Receipt = sequelize.define('Receipt', {
     donor: {
@@ -24,7 +25,7 @@ export default (sequelize, DataTypes) => {
       type: DataTypes.INTEGER,
       allowNull: false,
       validate: {
-        isNumeric: true,
+        isNumeric: true
       }
     },
     purpose: {
@@ -33,13 +34,13 @@ export default (sequelize, DataTypes) => {
     }
   }, {
     getterMethods: {
-      ReceiptNumber() {
+      ReceiptNumber () {
         return 'TUFRCPT' + this.id
       }
     }
-  });
+  })
   Receipt.associate = (models) => {
     // associations can be defined here
-  };
-  return Receipt;
-};
+  }
+  return Receipt
+}

@@ -1,6 +1,6 @@
-const receiptController = require('../controllers').receipt;
+const receiptController = require('../controllers').receipt
 
-module.exports = (app) => {
-    app.post('/api/receipt', receiptController.create);
-    app.get('/api/receipt', receiptController.list);
-} 
+export default function (app) {
+  app.post('/api/receipt', receiptController.create)
+  app.get('/api/receipt', receiptController.list)
+}

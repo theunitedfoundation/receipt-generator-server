@@ -1,6 +1,8 @@
-const receiptController = require('../controllers').receipt
+// const receiptController = require('../controllers').receipt
+
+import { ReceiptCntrl } from '../controllers'
 
 export default function (app) {
-  app.post('/api/receipt', receiptController.create)
-  app.get('/api/receipt', receiptController.list)
+  app.post('/api/receipt', ReceiptCntrl.create)
+  app.get('/api/receipt', ReceiptCntrl.list)
 }

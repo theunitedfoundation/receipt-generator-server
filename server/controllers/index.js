@@ -1,5 +1,5 @@
-const receipt = require('./receipt')
+// const receipt = require('./receipt')
 
-module.exports = {
-  receipt
-}
+import { ReceiptCntrl } from './receipt'
+
+export { ReceiptCntrl }

@@ -1,9 +1,6 @@
 import express from 'express'
 import logger from 'morgan'
-import {
-  json,
-  urlencoded
-} from 'body-parser'
+import { json, urlencoded } from 'body-parser'
 import Routes from './server/routes'
 
 // Set up the express app
@@ -28,4 +25,4 @@ app.get('*', (req, res) =>
   })
 )
 
-export const nodeapp = app
+export { app }

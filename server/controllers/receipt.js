@@ -1,6 +1,8 @@
-const Receipt = require('../models').Receipt
+import { db } from '../models'
 
-export function create (req, res) {
+const Receipt = db.Receipt
+
+function create (req, res) {
   return Receipt
     .create({
       donor: req.body.donor,
@@ -14,9 +16,14 @@ export function create (req, res) {
     .catch(error => res.status(400).send(error))
 }
 
-export function list (req, res) {
+function list (req, res) {
   return Receipt
     .all()
     .then(receipts => res.status(200).send(receipts))
     .catch(error => res.status(400).send(error))
+}
+
+export const ReceiptCntrl = {
+  list: list,
+  create: create
 }
